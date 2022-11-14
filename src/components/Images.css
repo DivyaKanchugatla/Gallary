@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+
+
+.Gallery-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px){
+    .Gallery-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+    height: 130px;
+    margin: 8px;
+   
+    
+}
+
+@media screen and (min-width: 768px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 160px;
+        height: 256px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+        width: 250px;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+}
+
+.image {
+    height: 100px;
+    width: 70px;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .image {
+        height: 210px;
+        width: 160px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .image {
+        height: 290px;
+        width: 250px;
+        
+    }
+}
+
+
+.title {
+    font-family: "Roboto";
+    font-size: 6px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-family: "Roboto";
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-family: "Roboto";
+        font-size: 16px;
+    }
+}
