@@ -1,9 +1,10 @@
 import React, { useState, useEffect,useRef } from "react";
 import "./Images.css";
 
+
 const Images = () => {
   const [result, setResult] = useState([]);
-  let shouldlog = useRef(true);
+  let strict = useRef(true);
 
  
 
@@ -17,20 +18,23 @@ const Images = () => {
   setResult(data.photos.photo);
 };
 
-
 useEffect(() => {
  
-  if (shouldlog.current) {
-   shouldlog.current = false;
+  if (strict.current) {
+   strict.current = false;
    console.log("component mounted");
    
    fetching();
    }
  
+   
  return () => console.log("function cleaned up");
  }, []);
 
-
+ let myCurrentDate = new Date()
+ let date = myCurrentDate.getDate();
+ let month = myCurrentDate.getMonth() + 1;
+ let year = myCurrentDate.getFullYear();
  
 
   return (
@@ -44,7 +48,8 @@ useEffect(() => {
                 className="image"
                 alt="Gallery-images"
               />
-              <p className="title">{each.title}</p>
+              <p className="title">{each.title} <br/> <br />{date-i} {month<10?`0${month}`:`${month}`} {year}</p>
+              
             </div>
           );
         })}
